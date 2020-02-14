@@ -9,7 +9,7 @@ html, body {
     color: white;
     
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -18,9 +18,7 @@ html, body {
     padding: 1%;
 
 }
-h1{
-    vertical-align: middle;
-}
+
 
 
 .wrapper{}
