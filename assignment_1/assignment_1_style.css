@@ -60,7 +60,7 @@ html, body {
     padding: 1%;
   }
 
-  main p span, nav, aside, section {
+  main p span, aside, section {
     background-color: #87CCF5;
     padding: 2%;
     flex-flow: row wrap;

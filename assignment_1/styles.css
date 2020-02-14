@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+
+.header {
+    background-color: #7C76F5;
+    color: white;
+    
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+    width: 100;
+    padding: 1%;
+
+}
+h1{
+    vertical-align: middle;
+}
+
+
+.wrapper{}
+
+.content{}
+
+.picture-caption{}
+
+.description{}
+
+
+#FFBF8A
+#F2F6C3
