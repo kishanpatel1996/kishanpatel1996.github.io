@@ -3,32 +3,91 @@ html, body {
     padding: 0;
   }
 
+  html {
+    font-size: 10px;
+    background-color: #FFBF8A;
+  }
+ body {
+   margin: 0 auto;
+ }
 
 .header {
     background-color: #7C76F5;
     color: white;
+    text-shadow: 2px 2px black;
     
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+ 
 
     margin-bottom: 15px;
     width: 100;
     padding: 1%;
-
+    text-align: center;
+    font-size: 3rem;
 }
 
 
 
-.wrapper{}
 
-.content{}
+.wrapper{
+  flex-wrap: nowrap;
 
-.picture-caption{}
+}
 
-.description{}
+.content{
+  padding: 2%;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 960px;
+  max-height: 960px;
+  flex: 4;
+  ;
+}
+
+.body-color{
+  background-color: #F2F6C3;
+  padding:2%
+}
+
+.picture-caption{
+  display: block;
+  height: 60px;
+  padding-right: 15px;
+
+}
+
+.picture {
+  display: block;
+  height: 320px;
+  padding-right: 15px;
+  max-width: 100%;
+
+}
 
 
-#FFBF8A
-#F2F6C3
+.description{
+  width: 0 auto
+}
+
+
+
+
+.main-font {
+  font-family: 'Flamenco', cursive;
+  color: black;
+}
+
+ol li {
+  font-family: 'Cinzel Decorative', cursive;
+  color: black;
+
+}
+
+p, ul li {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: black;
+
+}
