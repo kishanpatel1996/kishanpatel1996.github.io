@@ -7,6 +7,7 @@ html, body {
     font-size: 10px;
     background-color: #FFBF8A;
   }
+
  body {
    margin: 0 auto;
  }
@@ -18,8 +19,7 @@ html, body {
     
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
- 
+    justify-content: space-between;
 
     margin-bottom: 15px;
     width: 100;
@@ -31,45 +31,38 @@ html, body {
 
 
 
-.wrapper{
+.wrapper {
   flex-wrap: nowrap;
-
+  justify-content: space-around;
+  max-width: 960px;
+  max-height: 960px;
 }
 
-.content{
+.content {
   padding: 2%;
   flex-wrap: nowrap;
   display: flex;
-  justify-content: space-evenly;
-  max-width: 960px;
-  max-height: 960px;
-  flex: 4;
-  ;
 }
 
-.body-color{
+.body-color {
   background-color: #F2F6C3;
-  padding:2%
+  padding: 2%;
 }
 
-.picture-caption{
+.picture-caption {
   display: block;
   height: 60px;
   padding-right: 15px;
-
 }
 
 .picture {
   display: block;
-  height: 320px;
   padding-right: 15px;
-  max-width: 100%;
-
+  max-width: 66%;
 }
 
-
-.description{
-  width: 0 auto
+.description {
+  flex-wrap: wrap
 }
 
 
@@ -77,7 +70,7 @@ html, body {
 
 .main-font {
   font-family: 'Flamenco', cursive;
-  color: black;
+
 }
 
 ol li {
