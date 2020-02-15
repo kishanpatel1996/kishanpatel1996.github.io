@@ -42,6 +42,7 @@ html, body {
   padding: 2%;
   flex-wrap: nowrap;
   display: flex;
+  justify-content: center;
 }
 
 .body-color {
@@ -82,5 +83,4 @@ ol li {
 p, ul li {
   font-family: 'Roboto Condensed', sans-serif;
   color: black;
-
 }
