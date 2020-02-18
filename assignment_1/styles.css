@@ -71,7 +71,12 @@ flex-grow: 2;
 
 .main-font {
   font-family: 'Flamenco', cursive;
+}
+
+.font-size {
+  font-size: 3rem;
   font-weight: bold;
+
 
 }
 
