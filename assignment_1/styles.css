@@ -38,7 +38,6 @@ html, body {
 }
 
 .content {
-  padding: 2%;
   flex-wrap: nowrap;
   display: flex;
   justify-content: center;
