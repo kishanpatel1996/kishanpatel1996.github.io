@@ -22,7 +22,7 @@ html, body {
 
     margin-bottom: 15px;
     padding: 1%;
-    font-size: 3.5rem;
+    font-size: 3rem;
     min-width: 960px;
 }
 
@@ -70,18 +70,17 @@ flex-grow: 2;
 
 
 .main-font {
-  font-family: 'Flamenco', cursive;
-}
+  font-family: 'Cinzel Decorative', cursive;}
 
 .font-size {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: bold;
 
 
 }
 
 ol li {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Flamenco', cursive;
   color: black;
   font-size: 1.8rem;
 
