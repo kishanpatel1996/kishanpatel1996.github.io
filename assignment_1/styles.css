@@ -37,8 +37,9 @@ html, body {
 .content {
   display: flex;
   justify-content: center;
-  min-width: 960px
-  
+  min-width: 960px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
  
 .body-color {
@@ -48,18 +49,23 @@ html, body {
 
 .picture-caption {
   display: block;
+  flex-grow: 1;
 }
 
 .picture {
   display: block;
-  padding-right: 15px;
   max-width: 66%;
 }
 
 .description {
-
+flex-grow: 2;
 }
 
+.border {
+  border-width: 1px; 
+  border-style: solid;
+  border-radius: 4px;
+} 
 
 
 
