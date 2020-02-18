@@ -25,7 +25,9 @@ html, body {
     width: 100;
     padding: 1%;
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    min-width: 960px;
+    
 }
 
 
@@ -34,8 +36,7 @@ html, body {
 .wrapper {
   flex-wrap: nowrap;
   justify-content: space-around;
-  max-width: 960px;
-  max-height: 960px;
+  min-height: 960px;
 }
 
 .content {
@@ -43,6 +44,8 @@ html, body {
   flex-wrap: nowrap;
   display: flex;
   justify-content: center;
+  min-width: 960px
+  
 }
 
 .body-color {
@@ -71,16 +74,19 @@ html, body {
 
 .main-font {
   font-family: 'Flamenco', cursive;
+  font-weight: bold;
 
 }
 
 ol li {
   font-family: 'Cinzel Decorative', cursive;
   color: black;
+  font-size: 1.8rem;
 
 }
 
-p, ul li {
+p, ul li, i {
   font-family: 'Roboto Condensed', sans-serif;
   color: black;
+  font-size: 1.5rem;
 }
