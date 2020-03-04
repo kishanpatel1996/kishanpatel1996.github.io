@@ -38,17 +38,16 @@
         let lastName = myName.substring(7,12);
 
         /* Number 12*/
-        let totalLength = firstName.length + lastName.length
+        let totalLength = firstName.length + lastName.length;
         let third = myName[2];
         let last_three = myName.slice(-3);
 
-        let n = myName.length;
         
         /* Number 6 */
         var element1 = document.querySelector(".content");
         var p1Elem = document.createElement("p");
         p1Elem.className = "p1";
-        p1Elem.innerHTML = "My name has " + n + " characters";
+        p1Elem.innerHTML = "My name has " + totalLength + " characters";
         element1.appendChild(p1Elem);
 
 
@@ -68,11 +67,10 @@
         element2.appendChild(p2Elem);
 
 
-        /* Number 4 and 13 
-        content.textContent = totalLength;
+        /* Number 4 and 13 */
         const header = document.querySelector(".header");
         header.innerHTML = "Kishan's Lab 4 "+ totalLength ;
-        */
+        
 
       }
     </script>
