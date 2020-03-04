@@ -45,19 +45,34 @@
         let n = myName.length;
         
         /* Number 6 */
-        content.innerHTML = "My name has " + n + " characters";
-        
+        var element1 = document.querySelector(".content");
+        var p1Elem = document.createElement("p");
+        p1Elem.className = "p1";
+        p1Elem.innerHTML = "My name has " + n + " characters";
+        element1.appendChild(p1Elem);
+
+
         /* Number 7 and 8 */
-        content.textContent = "The third character in my name is " + third.toUpperCase();
+        var element2 = document.querySelector(".content");
+        var p2Elem = document.createElement("p");
+        p2Elem.className = "p2";
+        p2Elem.innerHTML = "The third character in my name is " + third.toUpperCase();
+        element2.appendChild(p2Elem);
+
         
         /* Number 10 */
-        content.textContent = last_three;
-        
-        /* Number 4 and 13 */
+        var element2 = document.querySelector(".content");
+        var p2Elem = document.createElement("p");
+        p2Elem.className = "p2";
+        p2Elem.innerHTML = last_three;
+        element2.appendChild(p2Elem);
+
+
+        /* Number 4 and 13 
         content.textContent = totalLength;
         const header = document.querySelector(".header");
         header.innerHTML = "Kishan's Lab 4 "+ totalLength ;
-        
+        */
 
       }
     </script>
