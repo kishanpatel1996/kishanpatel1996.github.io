@@ -29,8 +29,35 @@
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
 
+        
+        let myName = "Kishan Patel";
+        let fullName = myName.split(" ");
+
+        /* Number 11 */
+        let firstName = myName.substring(0,6);
+        let lastName = myName.substring(7,12);
+
+        /* Number 12*/
+        let totalLength = firstName.length + lastName.length
+        let third = myName[2];
+        let last_three = myName.slice(-3);
+
+        let n = myName.length;
+        
+        /* Number 6 */
+        content.innerHTML = "My name has " + n + " characters";
+        
+        /* Number 7 and 8 */
+        content.textContent = "The third character in my name is " + third.toUpperCase();
+        
+        /* Number 10 */
+        content.textContent = last_three;
+        
+        /* Number 4 and 13 */
+        content.textContent = totalLength;
         const header = document.querySelector(".header");
-        header.innerHTML = "Kishan's Lab 4";
+        header.innerHTML = "Kishan's Lab 4 "+ totalLength ;
+        
 
       }
     </script>
