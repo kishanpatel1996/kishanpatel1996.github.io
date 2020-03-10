@@ -3,7 +3,7 @@
 
 <head>
   <title>Test JSON page</title>
-  <link rel="stylesheet" type="text/css" href="./lab_styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -279,7 +279,25 @@
       { "name": "Zambia", "code": "ZM" },
       { "name": "Zimbabwe", "code": "ZW" }
     ]
-    console.log("List of countries in the world", countries);
+    
+    function loadData() {
+        console.log("List of countries in the world", countries);
+        sessionStorage.setItem("json_item", JSON.stringify(countries));
+      }
+      function clickMe() {
+        const str = sessionStorage.getItem("json_item");
+        const countname = JSON.parse(str);
+        console.log(countname);
+        var steam = "";
+        for (var i = 0; i < 25; i++) {
+          steam +=
+            "<li>" + countname[Math.floor(Math.random() * 242)] + "</li>";
+          const countname = list.map(i => i.name);
+        }
+        console.log(steam);
+        document.getElementsByClassName("instructions")[0].innerHTML =
+          "<ol>" + steam + "</ol>";
+      }
   </script>
 </body>
 
