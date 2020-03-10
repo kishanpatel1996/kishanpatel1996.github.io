@@ -284,7 +284,7 @@
         console.log("List of countries in the world", countries);
         sessionStorage.setItem("json_item", JSON.stringify(countries));
       }
-      function clickMe() {
+    function clickMe() {
         const str = sessionStorage.getItem("json_item");
         const countname = JSON.parse(str);
         console.log(countname);
