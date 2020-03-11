@@ -265,27 +265,31 @@
       { "name": "Zimbabwe", "code": "ZW" }
     ];
 
-    function loadData() {
-      console.log("List of countries in the world", countries);
-      sessionStorage.setItem("json_item", JSON.stringify(countries));
-      }
     function clickMe() {
+      /* Numbber 1 */
       const header = document.querySelector(".header");
-      header.innerHTML = "Kishan's List Of Countries"+ totalLength ;
+      header.innerHTML = "Kishan's List Of Countries";
 
-      const str = sessionStorage.getItem("json_item");
-      const countname = JSON.parse(str);
-      console.log(countname);
-      var steam = "";
-      for (var i = 0; i < 50; i++) {
-        steam +=
-          "<li>" + countname[Math.floor(Math.random() * 242)] + "</li>";
-        const countname = list.map(i => i.name);
+
+      /* Number 2 */
+      sessionStorage.setItem("json_item", JSON.stringify(countries));
+
+      const country_names = JSON.parse(countries);
+      console.log(country_names);
+
+      var list_order = "";
+      for (var i = 0; i < 25; i++) {
+        list_order +=
+          "<li>" + country_names[Math.floor(Math.random() * 242)] + "</li>";
+        const country_names = list.map(i => i.name);
       }
-      console.log(steam);
-      document.getElementsByClassName("instructions")[0].innerHTML =
-        "<ol>" + steam + "</ol>";
+
+
+      console.log(list_order);
+      document.getElementsByClassName("countries")[0].innerHTML =
+        "<ol>" + list_order + "</ol>";
       };
+      
 
   </script>
 </body>
