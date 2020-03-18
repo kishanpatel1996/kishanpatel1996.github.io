@@ -263,32 +263,53 @@
       { "name": "Yemen", "code": "YE" },
       { "name": "Zambia", "code": "ZM" },
       { "name": "Zimbabwe", "code": "ZW" }
-    ];
+    ]
 
+
+    let header = document.querySelector('.header');
+
+    let content = document.querySelector('.content');
+    header.innerHTML = "Kishan's List Of Countries";
+
+    let arr = [];
+    countries.forEach(country => {
+      arr.push(country.name);
+      });
+
+    let ordered_list = document.createElement('ol');
+    ordered_list.className = 'countries';
+    
     function clickMe() {
-      /* Numbber 1 */
-      const header = document.querySelector(".header");
-      header.innerHTML = "Kishan's List Of Countries";
+      let array = [];
+      let not_array = [];
+      let not_used = [];
+      while(array.length < 25){
+        var r = Math.floor(Math.random() * 242) + 1;
+        if(array.indexOf(r) === -1) 		array.push(r);
+        }
+        
+      for(i=0;i<243;i++){
+        not_array.push(i);
+        }
 
+      not_array.forEach(number => {
+        if(!(arr.includes(number))){
+          not_used.push(number);
+          }
+        });
 
-      /* Number 2 */
-      sessionStorage.setItem("json_item", JSON.stringify(countries));
+        let list = '';
+        array.forEach(number=>{
+          list+=`<li><b>${countries[number].code}</b> ${countries[number].name}</li>`;
+        });
 
-      const country_names = JSON.parse(countries);
-      console.log(country_names);
-
-      var list_order = "";
-      for (var i = 0; i < 25; i++) {
-        list_order +=
-          "<li>" + country_names[Math.floor(Math.random() * 242)] + "</li>";
-        const country_names = list.map(i => i.name);
-      }
-
-
-      console.log(list_order);
-      document.getElementsByClassName("countries")[0].innerHTML =
-        "<ol>" + list_order + "</ol>";
-      };
+        content.innerHTML = '';
+        ordered_list.innerHTML= list;
+        content.appendChild(ordered_list);
+        not_used.forEach(number=>{
+          console.log(countries[number]);
+          });
+        }
       
 
   </script>
