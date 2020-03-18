@@ -266,9 +266,9 @@
     ]
 
 
-    let header = document.querySelector('.header');
+    let header = document.querySelector(".header");
 
-    let content = document.querySelector('.content');
+    let content = document.querySelector(".content");
     header.innerHTML = "Kishan's List Of Countries";
 
     let arr = [];
@@ -276,8 +276,8 @@
       arr.push(country.name);
       });
 
-    let ordered_list = document.createElement('ol');
-    ordered_list.className = 'countries';
+    let ordered_list = document.createElement("ol");
+    ordered_list.className = "countries";
     
     function clickMe() {
       let array = [];
@@ -298,12 +298,12 @@
           }
         });
 
-        let list = '';
+        let list = "";
         array.forEach(number=>{
           list+=`<li><b>${countries[number].code}</b> ${countries[number].name}</li>`;
         });
 
-        content.innerHTML = '';
+        content.innerHTML = "";
         ordered_list.innerHTML= list;
         content.appendChild(ordered_list);
         not_used.forEach(number=>{
