@@ -8,13 +8,13 @@ const overlay = document.querySelector('.overlay');
 const images = ["images/pic1.jpeg", "images/pic2.jpeg", "images/pic3.jpeg", "images/pic4.jpeg", "images/pic5.jpeg" ];
 images.forEach(image => {
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', images);
+    newImage.setAttribute('src', image);
     thumbBar.appendChild(newImage);
 
 })
 
 const all_images = document.querySelectorAll("thumb-bar img");
-all_images.forEach(images => {
+all_images.forEach(image => {
     images.onClick("click", () => {
         let newImage = image.getAttribute("src");
         displayedImage.setAttribute("src", newImage);
