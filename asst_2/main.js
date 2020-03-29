@@ -31,5 +31,5 @@ btn.onClick("click", () => {
         btn.setAttribute("class", "light");
         btn.style.color = "";
         btn.style.backgroundColor = "rgba(0,0,0,0.5)";
-    }
+    })
 })
