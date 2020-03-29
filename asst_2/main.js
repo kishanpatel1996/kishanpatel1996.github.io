@@ -24,12 +24,12 @@ all_images.forEach(image => {
 console.log(all_images);
 
 /* Wiring up the Darken/Lighten button */
-btn.onClick("click", () => {
+btn.onClick("click", ()=> {
     let button_class = btn.getAttribute("class");
     console.log(button_class);
     if(button_class === "dark") {
         btn.setAttribute("class", "light");
         btn.style.color = "";
         btn.style.backgroundColor = "rgba(0,0,0,0.5)";
-    })
+    }
 })
