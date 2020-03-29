@@ -8,7 +8,7 @@ const overlay = document.querySelector('.overlay');
 const images = ["images/pic1.jpeg", "images/pic2.jpeg", "images/pic3.jpeg", "images/pic4.jpeg", "images/pic5.jpeg" ];
 images.forEach(image => {
     const newImage = document.createElement('img');
-    newImage.setAttribute('src', image);
+    newImage.setAttribute('src', images);
     thumbBar.appendChild(newImage);
 
 })
