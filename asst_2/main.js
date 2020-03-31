@@ -16,14 +16,15 @@ images.forEach(image => {
 
 })
 
-
-btn.addEventListener("click", ()=> {
-    let button_class = btn.getAttribute("class");
-    console.log(button_class);
-    if(button_class === "dark") {
-        btn.setAttribute("class", "light");
-        btn.style.color = "";
-        btn.style.backgroundColor = "rgba(0,0,0,0.5)";
+/* Wiring up the Darken/Lighten button */
+btn.onclick = ()=>{
+    if (btn.getAttribute('class') == 'dark') {
+        btn.setAttribute('class', 'light');
+        btn.innerHTML = 'Lighten';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    } else if (btn.getAttribute('class') == 'light') {
+        btn.setAttribute('class', 'dark');
+        btn.innerHTML = 'Darken';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0)';
     }
-})
-
+}
