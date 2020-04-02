@@ -28,7 +28,14 @@
     </div>
     <script>
         /* Your lab code can go here, or in an external file you include */
-        var mymap = L.map("mapid").setView([38.9788, -76.9461], 15);
+        var map = document.createElement("div");
+        map.id = "map";
+        var content = document.querySelector(".content");
+        content.appendChild(map);
+        map.style = "width: 640px; height: 480px;";
+        
+        
+        var map_area = L.map("map").setView([38.9888, -76.9411], 15);
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
           attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -37,10 +44,17 @@
           tileSize: 512,
           zoomOffset: -1,
           accessToken: 'pk.eyJ1Ijoia2lzaGFucGF0ZWw5NiIsImEiOiJjazhqZGVvODYwZnRxM2xta2MxNjBjd2hjIn0.SBbDIspPaaEFw_cL6A5Ijw'
-        }).addTo(mymap);
+        }).addTo(map_area);
 
 
+        var McKeldin = L.marker([38.986235, -76.944613]).addTo(map_area);
+        McKeldin.bindPopup("<b>McKeldin Library</b>");
 
+        var Hornbake = L.marker([38.988378, -76.941159]).addTo(map_area);
+        Hornbake.bindPopup("<b>Hornbake Library</b>");
+
+        var Eppley = L.marker([38.993773, -76.945139]).addTo(map_area);
+        Eppley.bindPopup("<b>Eppley Rec Centre</b>");
 
 
 
