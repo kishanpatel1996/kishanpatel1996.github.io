@@ -6,7 +6,7 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="height: 100vh; width: 100%;">
       <div class="wrapper">
         <div class="header">Frontend Libraries: Charts Lab</div>
         <div class="content">
@@ -16,12 +16,85 @@
       </div>
     </div>
     <script>
-      fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json') // replace this with the food safety data set
-        .then((data) => data.json()) // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
-        .then((data) => { // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
-          console.log(data);
-          // return data; // <- this will pass the data to the next "then" statement when I'm ready.
+        fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json')  // replace this with the food safety data set
+        .then(res => res.json())  // this is an "implicit return" - we're returning the results of the Fetch request to the next step.
+        .then(data=>{console.log(data); return data})
+        .then(data=> {
+        // this is an explicit return. If I want my information to go further, I'll need to use the "return" keyword before the brackets close
+            Array.prototype.count = function()
+            {
+
+              return this.reduce(function(objects, element)
+              {
+                  objects[element.category] = objects[element.category] ? ++objects[element.category] : 1;
+                  return objects;
+              }, {})
+            }
+
+            let objects = data.count();
+            var dataPoints = Object.keys(objects).map(function (key) {
+              return {y: objects[key], label: key};
+            });
+
+            return dataPoints;
         })
+
+        .then(data => {
+          let content = document.querySelector(".content");
+          let div = document.createElement("div");
+          div.id = "chartContainer";
+          content.appendChild(div);
+          window.onload = function() {
+
+
+            var bar_graph = new CanvasJS.Chart("container", {
+              title: {
+                text: "Let's Find Somewhere to Eat"
+                },
+
+                subtitles:[{
+                    ext: "Let's eat out in the future!",
+                    verticalAlign: "bottom"
+                  }
+                ],
+
+                axisY: {
+                  labelFontSize: 14,
+                  interval: 10,
+                  scaleBreaks: {
+                    customBreaks: [{
+                      startValue: 15,
+                      endValue: 35
+                    },
+
+                    {
+                      startValue: 60,
+                      endValue: 130
+                    },
+
+                    {
+                      startValue: 150,
+                      endValue: 220
+                    }]
+                  }
+                },
+
+                axisX:{
+                    labelFontSize: 14,
+                    interval: 1
+                },
+
+                data: [{
+                  type: "bar",
+                  dataPoints: data
+                }]
+              });
+
+              bar_graph.render();
+            }
+        })
+
+
     </script>
   </body>
 </html>
