@@ -15,10 +15,8 @@
     </div>
   </div>
   <script>
-
     var header_elm = document.querySelector('.header');
     header_elm.insertAdjacentHTML('afterend', '<button class="button" onclick="loadData()">Load Some JSON</button>');
-
 
     function loadData() {
       fetch('https://api.umd.io/v0/bus/routes')
@@ -52,7 +50,6 @@
           }
           document.querySelector('.header').innerHTML = "UMD Bus Route " + routes.find(my_route).title;
         })
-        
     }
   </script>
 </body>
