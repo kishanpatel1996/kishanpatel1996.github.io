@@ -15,11 +15,45 @@
     </div>
   </div>
   <script>
-    fetch('/api') // Rather than fetching from PG County, we're going to fetch from our own server.
-      .then(res => res.json())
-      .then(res => {
-        // Here's where your chart code should go.
-      })
+
+    var header_elm = document.querySelector('.header');
+    header_elm.insertAdjacentHTML('afterend', '<button class="button" onclick="loadData()">Load Some JSON</button>');
+
+
+    function loadData() {
+      fetch('https://api.umd.io/v0/bus/routes')
+        .then(res => res.json())
+        .then(routes => {
+          console.log(routes);
+          return routes;
+        })
+
+        .then(routes => {
+          const list = routes.map(route => {
+            const ID = route.route_id;
+            const route_title = route.title.replace(ID, '');
+            const bus_routes = '<li>' + ID + ":" + route_title + '</li>' + '\n';
+            return bus_routes;
+          });
+
+          let all_routes = '';
+          for (i = 0; i < list.length; i++) {
+            all_routes += list[i];
+          }
+
+          const new_list = '<ul>' + '\n' + all_routes + '\n' + '</ul>';
+          document.querySelector(".content").innerHTML = new_list;
+          return routes;
+        })
+
+        .then(routes => {
+          function my_route(route) {
+            return route.route_id === '132';
+          }
+          document.querySelector('.header').innerHTML = "UMD Bus Route " + routes.find(my_route).title;
+        })
+        
+    }
   </script>
 </body>
 
